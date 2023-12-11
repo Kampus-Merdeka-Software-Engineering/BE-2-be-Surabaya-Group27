@@ -6,7 +6,6 @@ exports.getAllCategories = async (req, res) => {
     const categories = await prisma.categories.findMany();
     res.status(200).json(categories);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -27,7 +26,6 @@ exports.getCategoryById = async (req, res) => {
 
     res.status(200).json(category);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -55,7 +53,6 @@ exports.createCategory = async (req, res) => {
   
       res.status(201).json({ message: 'Category created', data: newCategory });
     } catch (error) {
-      console.error(error);
       res.status(500).json({ message: 'Internal Server Error' });
     }
 };  
@@ -76,7 +73,6 @@ exports.updateCategoryById = async (req, res) => {
 
     res.status(200).json(updatedCategory);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -93,7 +89,6 @@ exports.deleteCategoryById = async (req, res) => {
 
     res.status(200).json(deletedCategory);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
