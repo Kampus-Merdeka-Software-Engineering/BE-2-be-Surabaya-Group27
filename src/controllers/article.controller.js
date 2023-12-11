@@ -12,7 +12,6 @@ exports.getAllArticles = async (req, res) => {
     });
     res.status(200).json(articles);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -37,7 +36,6 @@ exports.getArticleById = async (req, res) => {
 
     res.status(200).json(article);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -81,7 +79,6 @@ exports.createArticle = async (req, res) => {
   
       res.status(201).json(newArticle);
     } catch (error) {
-      console.error(error);
       res.status(500).send('Internal Server Error');
     }
 };
@@ -112,7 +109,6 @@ exports.updateArticleById = async (req, res) => {
 
     res.status(200).json(updatedArticle);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -133,7 +129,6 @@ exports.deleteArticleById = async (req, res) => {
 
     res.status(200).json(deletedArticle);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 };
@@ -159,7 +154,6 @@ exports.searchArticleByTitle = async (req, res) => {
 
     res.status(200).json(articles);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 }
@@ -185,7 +179,6 @@ exports.searchArticleByCategory = async (req, res) => {
 
     res.status(200).json(articles);
   } catch (error) {
-    console.error(error);
     res.status(500).send('Internal Server Error');
   }
 }
