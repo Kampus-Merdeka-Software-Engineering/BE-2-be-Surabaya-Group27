@@ -30,7 +30,6 @@ exports.create = async (req, res) => {
 
         res.status(201).json(writer);
     } catch (error) {
-        console.error(error);
         res.status(400).send(error);
     }
 };
